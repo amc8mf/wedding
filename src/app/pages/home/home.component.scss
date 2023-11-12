@@ -1,24 +1,29 @@
 h1 {
-  margin: 30px;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: math, serif;
-  font-size: 60px;
-  color: #383736;
+    margin: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: math, serif;
+    font-size: 60px;
+    color: #383736;
+    font-weight: lighter;
 }
 
 .sub-title {
-  margin: 20px;
-  text-align: center;
-  font-family: math;
-  font-size: 40px;
-  color: #383736;
+    margin: 20px;
+    text-align: center;
+    font-family: math;
+    font-size: 40px;
+    color: #383736;
 }
 
 img {
-  position: absolute;
-  width: 100%;
-  z-index: -1;
-  max-height: 20em;
-  opacity: .3;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    max-height: 20em;
+    opacity: .3;
+}
+
+.italics {
+    font-style: italic;
 }
