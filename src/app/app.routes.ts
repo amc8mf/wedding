@@ -5,7 +5,7 @@ import {LodgingComponent} from "./lodging/lodging.component";
 import {RsvpComponent} from "./rsvp/rsvp.component";
 
 export const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'lodging', component: LodgingComponent },
   { path: 'rsvp', component: RsvpComponent },

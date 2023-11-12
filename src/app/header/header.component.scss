@@ -1,0 +1,21 @@
+.header {
+    ::ng-deep mat-toolbar {
+        display: flex;
+        justify-content: space-between;
+    }
+    ::ng-deep mat-icon {
+        vertical-align: middle;
+    }
+    button {
+        min-width: 6em;
+        width: fit-content;
+        margin: 3em;
+        color: darkolivegreen;
+    }
+
+    .main-nav-label {
+        margin-left: .3em;
+        vertical-align: middle;
+        font-family: math;
+    }
+}
