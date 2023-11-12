@@ -1,7 +1,10 @@
+:host {
+}
 .header {
     ::ng-deep mat-toolbar {
+        background-color: #ebe5dc;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
     ::ng-deep mat-icon {
         vertical-align: middle;
@@ -9,7 +12,7 @@
     button {
         min-width: 6em;
         width: fit-content;
-        margin: 3em;
+        margin: 1em;
         color: darkolivegreen;
     }
 
