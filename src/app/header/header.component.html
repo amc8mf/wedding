@@ -1,26 +1,20 @@
 <div class="header">
     <mat-toolbar>
-        <button mat-raised-button>
+        <button [routerLink]="['/']" mat-raised-button>
             <mat-icon>home</mat-icon>
-            <a [routerLink]="['/']"><span class="main-nav-label">Home</span></a>
+            <span class="main-nav-label">Home</span>
         </button>
-        <button mat-raised-button>
+        <button [routerLink]="['/main-event']" mat-raised-button>
             <mat-icon>celebration</mat-icon>
-            <a [routerLink]="['/main-event']">
-                <span class="main-nav-label">Main Event</span>
-            </a>
+            <span class="main-nav-label">Main Event</span>
         </button>
-        <button mat-raised-button>
+        <button [routerLink]="['/lodging']" mat-raised-button>
             <mat-icon>cabin</mat-icon>
-            <a [routerLink]="['/lodging']">
-                <span class="main-nav-label">Lodging</span>
-            </a>
+            <span class="main-nav-label">Lodging</span>
         </button>
-        <button mat-raised-button>
+        <button [routerLink]="['/rsvp']" mat-raised-button>
             <mat-icon>message</mat-icon>
-            <a [routerLink]="['/rsvp']">
-                <span class="main-nav-label">RSVP</span>
-            </a>
+            <span class="main-nav-label">RSVP</span>
         </button>
     </mat-toolbar>
 </div>

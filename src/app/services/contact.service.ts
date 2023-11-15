@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-
+import emailJs from "@emailjs/browser";
 @Injectable({
     providedIn: 'root',
 })
@@ -9,7 +9,14 @@ export class ContactService {
     constructor(private http: HttpClient) { }
 
     postMessage$(input: any) {
-        return this.http.post(this.baseUrl, input, )
+        emailJs.send(
+            "service_s3vhsur",
+            "template_l0p9hbw",
+            {
+                fullName: input.fullName,
+                message: input.message
+            }
+        ).then(r => console.log(r))
     }
 
 }

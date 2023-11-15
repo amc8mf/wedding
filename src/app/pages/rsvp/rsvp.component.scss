@@ -1,0 +1,97 @@
+:host {
+    margin-bottom: 50px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.form-container {
+    font-family: math;
+    font-size: 20px;
+    max-width: 50%;
+    @media (max-width: 500px) {
+        max-width: 80%;
+    }
+    margin: auto;
+    margin-bottom: 50px !important;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    @media (max-width: 900px) {
+        display: block;
+    }
+    margin: 1em;
+}
+
+.form-label {
+    margin-right: 1em;
+    text-align: right;
+    width: 35%;
+    @media (max-width: 900px) {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+input:not([type=radio]), textarea {
+    line-height: 1.5;
+    width: 50%;
+    justify-items: flex-end;
+    border-radius: .3em;
+    padding: 5px;
+    @media (max-width: 900px) {
+        display: block;
+        width: 100%;
+    }
+}
+
+textarea {
+    height: 5em;
+    padding: 5px;
+
+}
+
+button {
+    font-size: 18px;
+    background-color: darkseagreen;
+    width: 60%;
+    margin: auto;
+    height: 3em;
+    border-radius: .3em;
+    &:focus {
+        background-color: forestgreen;
+    }
+}
+
+input[type="radio"] {
+    width: 2em;
+    height: 2em;
+}
+
+.radio-form-group {
+    white-space: nowrap;
+    .form-label {
+        @media (max-width: 900px) {
+            display: block;
+            margin-bottom: 1em;
+        }
+    }
+
+    input {
+        margin-right: 5em;
+        margin-top:-4px;
+    }
+
+    label, input {
+        vertical-align: middle;
+        white-space: nowrap;
+    }
+}

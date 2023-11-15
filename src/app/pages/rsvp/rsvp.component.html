@@ -1,1 +1,66 @@
-<p>rsvp works!</p>
+<h1>RSVP</h1>
+<div class="form-container">
+    <form #rsvpForm="ngForm">
+
+        <div class="form-group">
+            <label class="form-label" for="email">Email:</label>
+            <input type="email"
+                class="form-control"
+                id="email"
+                required
+                [(ngModel)]="model.email"
+                name="email">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" for="name">Name:</label>
+            <input type="text"
+                class="form-control"
+                id="name"
+                required
+                [(ngModel)]="model.name"
+                name="first-name">
+        </div>
+
+        <div class="form-group radio-form-group">
+            <span class="form-label">Will you attend?</span>
+            <label for="willAttendY">Accept</label>
+            <input type="radio"
+                class="form-control"
+                id="willAttendY"
+                required
+                [(ngModel)]="model.willAttend"
+                name="will-attend">
+            <label for="willAttendN">Decline</label>
+            <input type="radio"
+                class="form-control"
+                id="willAttendN"
+                required
+                [(ngModel)]="model.willAttend"
+                name="will-attend">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" for="additionalGuests">Please list any additional guests:</label>
+            <textarea type="text"
+                class="form-control"
+                id="additionalGuests"
+                required
+                [(ngModel)]="model.additionalGuests" name="additional-guests">
+            </textarea>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" for="dietaryRestrictions">Are there any dietary restrictions?</label>
+            <textarea
+                class="form-control"
+                id="dietaryRestrictions"
+                required
+                [(ngModel)]="model.dietaryRestrictions" name="dietary-restrictions">
+
+            </textarea>
+        </div>
+
+        <button type="submit">Submit Form</button>
+    </form>
+</div>
