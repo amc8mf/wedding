@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {FormsModule} from "@angular/forms";
 import {RsvpForm} from "./rsvp-form";
+import {EmailService} from "../../services/email.service";
 
 @Component({
   selector: 'app-rsvp',
@@ -20,10 +21,16 @@ export class RsvpComponent {
         "",
         ""
     );
-
-    onSubmit() {
-        this.submitted = true;
-        console.log(this.model);
+    private emailService: EmailService;
+    public constructor(
+        emailService: EmailService
+    ) {
+        this.emailService = emailService;
     }
 
+    onSubmit() {
+        this.emailService.postMessage$(this.model).then(() => {
+            this.submitted = true;
+        });
+    }
 }

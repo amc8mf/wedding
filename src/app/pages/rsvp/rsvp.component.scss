@@ -3,11 +3,11 @@
     font-family: math;
 }
 
-h1 {
+h1, h2, p {
     text-align: center;
 }
 
-.form-container {
+.form-container, .success-msg {
     font-size: 20px;
     max-width: 50%;
     @media (max-width: 500px) {
@@ -60,7 +60,8 @@ textarea {
 
 button {
     font-size: 18px;
-    background-color: darkseagreen;
+    background-color: #42A948;
+    color: white;
     width: 60%;
     margin: auto;
     height: 3em;
@@ -96,28 +97,41 @@ input[type="radio"] {
 }
 
 .alert {
-    color: red;
+    color: #a94442;
     margin-top: 1em;
 }
 
 .ng-valid[required], .ng-valid.required  {
-    border-left: 5px solid #42A948; /* green */
+    border-left: 5px solid #42A948;
 }
 
 .ng-invalid:not(form)  {
-    border-left: 5px solid #a94442; /* red */
+    border-left: 5px solid #a94442;
 }
 
 .row {
     display: flex;
     margin: 2em;
+    @media (max-width: 900px) {
+        flex-direction: column;
+        width: 95%;
+        word-wrap: break-word;
+    }
 }
 
 .label {
-    //width: 30%
+    width: 30%;
+    @media (max-width: 900px) {
+        width: 100%
+    }
 }
 
 .submitted-val {
     width: 70%;
+}
+
+.success {
+    color: #42A948;
+    font-size: 48px;
 }
 

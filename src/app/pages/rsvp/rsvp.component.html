@@ -77,8 +77,9 @@
         <button type="submit">Submit Form</button>
     </form>
 </div>
-<div [hidden]="!submitted">
-    <h2>You submitted the following:</h2>
+<div [hidden]="!submitted" class="success-msg">
+    <h2 class="success">Success!</h2>
+    <p>You submitted the following:</p>
     <div class="row">
         <div class="label">Email:</div>
         <div class="submitted-val">{{ model.email }}</div>

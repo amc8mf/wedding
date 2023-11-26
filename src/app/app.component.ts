@@ -4,7 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import {HeaderComponent} from "./header/header.component";
 import {FooterComponent} from "./footer/footer.component";
 import {HttpClientModule} from "@angular/common/http";
-import {ContactService} from "./services/contact.service";
+import {EmailService} from "./services/email.service";
 
 @Component({
     selector: 'app-root',
@@ -13,7 +13,7 @@ import {ContactService} from "./services/contact.service";
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
     providers: [
-        ContactService
+        EmailService
     ],
 })
 export class AppComponent {
