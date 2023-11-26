@@ -13,10 +13,17 @@ import {RsvpForm} from "./rsvp-form";
 export class RsvpComponent {
 
     public submitted = false;
-    public model = new RsvpForm();
+    public model = new RsvpForm(
+        "",
+        "",
+        true,
+        "",
+        ""
+    );
 
     onSubmit() {
         this.submitted = true;
+        console.log(this.model);
     }
 
 }

@@ -1,25 +1,36 @@
 <h1>RSVP</h1>
-<div class="form-container">
-    <form #rsvpForm="ngForm">
+<div [hidden]="submitted" class="form-container">
+    <form (ngSubmit)="onSubmit()" #rsvpForm="ngForm">
 
         <div class="form-group">
             <label class="form-label" for="email">Email:</label>
-            <input type="email"
+            <input #email="ngModel"
+                type="email"
                 class="form-control"
                 id="email"
                 required
+                placeholder="Enter your email"
                 [(ngModel)]="model.email"
                 name="email">
+            <div *ngIf="email.invalid && (email.dirty || email.touched)"
+             class="alert">
+                <div *ngIf="email.errors?.['required']">Email is required.</div>
+            </div>
         </div>
 
         <div class="form-group">
             <label class="form-label" for="name">Name:</label>
-            <input type="text"
+            <input #name="ngModel"
+                type="text"
                 class="form-control"
                 id="name"
                 required
                 [(ngModel)]="model.name"
                 name="first-name">
+            <div *ngIf="name.invalid && (name.dirty || name.touched)"
+                 class="alert">
+                <div *ngIf="name.errors?.['required']">Name is required.</div>
+            </div>
         </div>
 
         <div class="form-group radio-form-group">
@@ -29,6 +40,7 @@
                 class="form-control"
                 id="willAttendY"
                 required
+                [value]="true"
                 [(ngModel)]="model.willAttend"
                 name="will-attend">
             <label for="willAttendN">Decline</label>
@@ -36,6 +48,7 @@
                 class="form-control"
                 id="willAttendN"
                 required
+                [value]="false"
                 [(ngModel)]="model.willAttend"
                 name="will-attend">
         </div>
@@ -63,4 +76,28 @@
 
         <button type="submit">Submit Form</button>
     </form>
+</div>
+<div [hidden]="!submitted">
+    <h2>You submitted the following:</h2>
+    <div class="row">
+        <div class="label">Email:</div>
+        <div class="submitted-val">{{ model.email }}</div>
+    </div>
+    <div class="row">
+        <div class="label">Name:</div>
+        <div class="submitted-val">{{ model.name }}</div>
+    </div>
+    <div class="row">
+        <div class="label">Will Attend:</div>
+        <div class="submitted-val">{{ model.willAttend }}</div>
+    </div>
+    <div class="row">
+        <div class="label">Additional Guests:</div>
+        <div class="submitted-val">{{ model.additionalGuests }}</div>
+    </div>
+    <div class="row">
+        <div class="label">Dietary Restrictions:</div>
+        <div class="submitted-val">{{ model.dietaryRestrictions }}</div>
+    </div>
+    <br>
 </div>

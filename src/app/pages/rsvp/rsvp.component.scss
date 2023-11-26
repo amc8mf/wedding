@@ -1,5 +1,6 @@
 :host {
     margin-bottom: 50px;
+    font-family: math;
 }
 
 h1 {
@@ -7,15 +8,13 @@ h1 {
 }
 
 .form-container {
-    font-family: math;
     font-size: 20px;
     max-width: 50%;
     @media (max-width: 500px) {
-        max-width: 80%;
+        max-width: 95%;
     }
     margin: auto;
     margin-bottom: 50px !important;
-
 }
 
 form {
@@ -95,3 +94,30 @@ input[type="radio"] {
         white-space: nowrap;
     }
 }
+
+.alert {
+    color: red;
+    margin-top: 1em;
+}
+
+.ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+    border-left: 5px solid #a94442; /* red */
+}
+
+.row {
+    display: flex;
+    margin: 2em;
+}
+
+.label {
+    //width: 30%
+}
+
+.submitted-val {
+    width: 70%;
+}
+
