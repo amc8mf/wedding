@@ -46,6 +46,7 @@ input:not([type=radio]), textarea {
     justify-items: flex-end;
     border-radius: .3em;
     padding: 5px;
+    font-size: 18px;
     @media (max-width: 900px) {
         display: block;
         width: 100%;
