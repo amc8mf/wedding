@@ -121,10 +121,7 @@ input[type="radio"] {
 }
 
 .label {
-    width: 30%;
-    @media (max-width: 900px) {
-        width: 100%
-    }
+    width: 100%
 }
 
 .submitted-val {
