@@ -12,17 +12,18 @@ export class EmailService {
     }
 
     async postMessage$(input: any): Promise<any> {
-        await emailJs.send(
-            "service_s3vhsur",
-            "template_4dlyj64",
-            {
-                email: input.email,
-                name: input.name,
-                willAttend: input.willAttend,
-                additionalGuests: input.additionalGuests,
-                dietaryRestrictions: input.dietaryRestrictions
-            },
-        )
+        console.log(input);
+        // await emailJs.send(
+        //     "service_s3vhsur",
+        //     "template_4dlyj64",
+        //     {
+        //         email: input.email,
+        //         name: input.name,
+        //         willAttend: input.willAttend,
+        //         additionalGuests: input.additionalGuests,
+        //         dietaryRestrictions: input.dietaryRestrictions
+        //     },
+        // )
     }
 
 }
