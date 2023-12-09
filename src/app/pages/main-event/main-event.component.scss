@@ -10,7 +10,7 @@ a:hover {
     text-align: center;
     font-family: Garamond, serif;
     font-size: 24px;
-    color: #383736;
+    color: #475247;
     width: 100%;
     margin: auto;
 }
@@ -25,9 +25,9 @@ img {
 .hero-image {
     background-image: url("/assets/skyline.jpeg");
     background-position: center;
-    height: 80%;
+    height: 60%;
     width: 100%;
-    opacity: .5;
+    opacity: .9;
     position: absolute;
     z-index: -1;
 }

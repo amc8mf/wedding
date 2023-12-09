@@ -1,9 +1,17 @@
-:host {
+.container {
     font-family: Garamond, serif;
     font-size: 1.5em;
+    color: floralwhite;
+    margin-left: 5em;
+    margin-right: 5em;
+    @media (max-width: 900px) {
+        margin-right: 0;
+        margin-left: 0;
+    }
 }
 
 h1 {
+    padding-top: 2em;
     margin: 30px;
     text-align: center;
     text-transform: uppercase;
@@ -12,7 +20,6 @@ h1 {
         font-size: 45px;
         margin: 10px;
     }
-    color: #383736;
     font-weight: lighter;
 }
 
@@ -23,7 +30,6 @@ h1 {
     @media (max-width: 500px) {
         font-size: 35px;
     }
-    color: #383736;
 }
 
 .event-details {
@@ -33,17 +39,30 @@ h1 {
     @media (max-width: 500px) {
         font-size: 25px;
     }
-    color: #383736;
-}
-
-img {
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-    max-height: 20em;
-    opacity: .3;
+    a {
+        color: inherit;
+    }
 }
 
 .italics {
     font-style: italic;
+}
+
+img {
+    position: absolute;
+    left: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100%;
+    @media (max-height: 500px) {
+        height: 650px;
+    }
+    @media (max-height: 800px) {
+        height: 950px;
+    }
+    @media (max-height: 1700px) {
+        height: 950px;
+    }
+    z-index: -1;
+    filter: brightness(50%);
 }

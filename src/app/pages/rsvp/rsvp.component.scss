@@ -1,6 +1,7 @@
 :host {
     margin-bottom: 50px;
     font-family: Garamond, serif;
+    color: #475247;
 }
 
 h1, h2, p {
@@ -24,11 +25,11 @@ form {
 
 .form-group {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     @media (max-width: 900px) {
         display: block;
     }
-    margin: 1em;
+    padding: 1em;
 }
 
 .form-label {
@@ -62,21 +63,21 @@ textarea {
 
 button {
     font-size: 18px;
-    background-color: #42A948;
+    background-color: #475247;
     color: white;
     width: 60%;
     margin: auto;
     height: 3em;
     border-radius: .3em;
     cursor: pointer;
-    &:focus {
+    &:hover {
         background-color: forestgreen;
     }
 }
 
 input[type="radio"] {
-    width: 2em;
-    height: 2em;
+    width: 25px;
+    height: 25px;
     cursor: pointer;
 }
 
@@ -106,7 +107,7 @@ input[type="radio"] {
 }
 
 .ng-valid[required], .ng-valid.required  {
-    border-left: 5px solid #42A948;
+    border-left: 5px solid #475247;
 }
 
 .ng-invalid:not(form)  {

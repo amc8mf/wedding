@@ -4,12 +4,14 @@
     font-size: 1.5em;
     margin:auto;
     width:50%;
+    color: #475247;
     @media (max-width: 900px) {
         width: 95%;
     }
 }
 
 ol {
+    padding-left: 0;
     list-style: none;
     li {
         margin: 10px;
@@ -17,6 +19,5 @@ ol {
 }
 
 a {
-    text-decoration: underline;
     color: inherit;
 }
