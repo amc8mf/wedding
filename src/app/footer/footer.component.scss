@@ -1,8 +1,41 @@
 footer {
-    background-color: #82806d;
+    background-color: #383736;
     width:100%;
     text-align: center;
     height: fit-content;
     margin-top: 20%;
     padding: .5em;
+    color: #fefcf6;
+}
+
+div {
+    @media (max-width: 900px) {
+        display: block;
+    }
+}
+
+p {
+
+    padding-right: 1em;
+}
+
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+     div {
+         display: flex;
+         @media (max-width: 900px) {
+             display: block;
+         }
+     }
+}
+
+.center {
+    text-align: center;
+    width: 100%;
+    @media (max-width: 900px) {
+        width: unset;
+
+    }
 }
