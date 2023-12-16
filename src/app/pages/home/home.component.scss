@@ -17,19 +17,23 @@
 h1 {
     padding: 1em;
     margin: 0;
-    font-size: 3.5em;
+    font-size: 3.7em;
     text-transform: uppercase;
     font-weight: lighter;
 }
 
 .sub-title {
-    padding: 30px;
+    padding: 1em;
     font-size: 3em;
+    border-top: 1px floralwhite solid;
+    border-bottom: 1px floralwhite solid;
+    width: 80%;
+    margin: auto;
 }
 
 .event-details {
-    padding: 30px;
-    font-size: 2.5em;
+    padding: 1em;
+    font-size: 1.5em;
 }
 
 .italics {
@@ -38,4 +42,18 @@ h1 {
 
 a {
     color: inherit;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding: 1em;
+    fa-icon {
+        vertical-align: middle;
+    }
+    p {
+        margin: 0;
+        padding-left: .5em;
+    }
 }
