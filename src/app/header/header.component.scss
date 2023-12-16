@@ -19,3 +19,12 @@ header {
         font-size: 18px;
     }
 }
+
+::ng-deep .mat-icon {
+    @media (max-width: 600px) {
+        margin-right: 0 !important;
+    }
+    @media (max-width: 400px) {
+        display: none !important;
+    }
+}

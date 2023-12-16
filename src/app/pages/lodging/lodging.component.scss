@@ -3,11 +3,23 @@
     font-family: Garamond, serif;
     font-size: 1.5em;
     margin:auto;
-    width:50%;
-    color: #475247;
-    @media (max-width: 900px) {
-        width: 95%;
+    color: floralwhite;
+    h1, h3 {
+        font-weight: lighter;
     }
+}
+
+.hero-image {
+    background-image: url("/assets/IMG_0226.JPEG");
+    background-position: bottom;
+    background-repeat:no-repeat;
+    background-size:cover;
+    filter: brightness(0.7) saturate(0%);
+    height: 1100px;
+    width: 100%;
+    opacity: .9;
+    position: absolute;
+    z-index: -1;
 }
 
 ol {
