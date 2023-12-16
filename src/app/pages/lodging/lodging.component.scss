@@ -2,32 +2,32 @@
     text-align: center;
     font-family: Garamond, serif;
     font-size: 1.5em;
-    margin:auto;
     color: floralwhite;
-    h1, h3 {
-        font-weight: lighter;
-    }
+}
+
+h1, h3, p {
+    font-weight: lighter;
+    margin: 0;
+    padding: 1em;
 }
 
 .hero-image {
-    background-image: url("/assets/IMG_0226.JPEG");
-    background-position: bottom;
-    background-repeat:no-repeat;
-    background-size:cover;
-    filter: brightness(0.7) saturate(0%);
-    height: 1100px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../assets/IMG_0226.JPEG");
+    background-size: cover;
+    background-position: 50% 65%;
+    position: relative;
     width: 100%;
-    opacity: .9;
-    position: absolute;
-    z-index: -1;
+    height: 100%;
 }
 
 ol {
-    padding-left: 0;
     list-style: none;
-    li {
-        margin: 10px;
-    }
+    margin: 0;
+    padding: 1em;
+}
+
+li {
+    padding: 10px;
 }
 
 a {
