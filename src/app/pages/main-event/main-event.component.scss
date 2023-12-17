@@ -12,10 +12,6 @@ h1, h2, h3, p {
     padding: 1em
 }
 
-h1 {
-    padding-top: 4em;
-}
-
 a {
     text-decoration: none;
 }
@@ -28,7 +24,7 @@ p {
 }
 
 .hero-image {
-    background-image: url("/assets/mountains.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/assets/mountains.jpg");
     background-size: cover;
     background-position: 45% 55%;
     position: relative;
