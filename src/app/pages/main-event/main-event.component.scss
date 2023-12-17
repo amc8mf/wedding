@@ -25,6 +25,7 @@ p {
 
 .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/assets/mountains.jpg");
+    filter: sepia(50%);
     background-size: cover;
     background-position: bottom;
     position: relative;
@@ -61,4 +62,13 @@ button {
         background-color: white;
         color: #383736;
     }
+}
+
+.main-info {
+    width: 80%;
+    border-top: 1px white solid;
+    border-bottom: 1px white solid;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 3em;
 }
