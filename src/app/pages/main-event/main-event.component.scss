@@ -1,5 +1,19 @@
-h1, h2, h3 {
+.container {
+    text-align: center;
+    font-family: Garamond, serif;
+    font-size: 24px;
+    color: floralwhite;
+    width: 100%;
+}
+
+h1, h2, h3, p {
     font-weight: 500;
+    margin: 0;
+    padding: 1em
+}
+
+h1 {
+    padding-top: 4em;
 }
 
 a {
@@ -8,31 +22,18 @@ a {
 a:hover {
     font-style: italic;
 }
-.container {
-    text-align: center;
-    font-family: Garamond, serif;
-    font-size: 24px;
-    color: floralwhite;
-    width: 100%;
-    margin: auto;
-}
 
 p {
-    margin: 5px;
-}
-img {
-    width: 50%;
+    padding: 5px;
 }
 
 .hero-image {
-    background-image: url("/assets/skyline.jpeg");
-    filter: brightness(0.7) saturate(0%);
-    background-position: center;
-    height: 60%;
+    background-image: url("/assets/mountains.jpg");
+    background-size: cover;
+    background-position: 45% 55%;
+    position: relative;
     width: 100%;
-    opacity: .9;
-    position: absolute;
-    z-index: -1;
+    height: 100%;
 }
 
 video {
@@ -44,6 +45,6 @@ video {
     }
 }
 
-.btm-link {
-    margin: 1em;
+.btn-link {
+    padding: 1em;
 }
