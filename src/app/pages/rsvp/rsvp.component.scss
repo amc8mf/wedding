@@ -25,11 +25,11 @@ form {
 }
 
 .form-group {
-display: flex;
-    @media (max-width: 900px) {
-    display: block;
-}
+    display: flex;
     padding: 1em;
+    @media (max-width: 900px) {
+        display: block;
+    }
     @media (max-width: 900px) {
         padding-left: 0;
         padding-right: 0;

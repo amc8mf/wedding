@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import {FormsModule} from "@angular/forms";
 import {RsvpForm} from "./rsvp-form";
 import {EmailService} from "../../services/email.service";
+import { CodeValidatorDirective } from './code-validator.directive';
 
 @Component({
   selector: 'app-rsvp',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, CodeValidatorDirective],
   templateUrl: './rsvp.component.html',
   styleUrl: './rsvp.component.scss'
 })

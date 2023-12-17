@@ -72,6 +72,26 @@
     
                 </textarea>
             </div>
+
+            <div class="form-group">
+                <label class="form-label" for="code">Please enter the code found in your email to submit the form:</label>
+                <input #code="ngModel"
+                    codeValidator
+                    type="text"
+                    class="form-control"
+                    id="code"
+                    required
+                    placeholder="Enter your code (required)"
+                    [(ngModel)]="model.code"
+                    name="code">
+                <div *ngIf="code.invalid && (code.dirty || code.touched)"
+                     class="alert">
+                    <div *ngIf="code.errors?.['required']">Code is required.</div>
+                    <div *ngIf="!code.errors?.['required'] && code.errors?.['invalidCode']">Code is not valid.</div>
+        
+                </div>
+            </div>
+
             <div class="alert" *ngIf="rsvpForm.touched && !rsvpForm.valid">
                 <p>Please fill out the Email and Name field before submitting the form.</p>
             </div>
