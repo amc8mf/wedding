@@ -22,8 +22,7 @@ export class CodeValidatorDirective implements Validator {
 
     private codeValidator(): ValidatorFn {
         return (control: AbstractControl): ValidationErrors | null => {
-            console.log(control.value);
-            const isValid = this.code === control.value;
+            const isValid = this.code === String(control.value).toLowerCase();
             return isValid ? null : { invalidCode: true };
         };
     }

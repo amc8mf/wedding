@@ -1,3 +1,4 @@
+    <div class="banner-image"></div>
     <h1>RSVP</h1>
     <div [hidden]="submitted" class="form-container">
         <form (ngSubmit)="onSubmit()" #rsvpForm="ngForm">
@@ -92,10 +93,10 @@
                 </div>
             </div>
 
-            <div class="alert" *ngIf="rsvpForm.touched && !rsvpForm.valid">
-                <p>Please fill out the Email and Name field before submitting the form.</p>
+            <div class="alert" *ngIf="email.touched && name.touched && code.touched && !rsvpForm.valid">
+                <p>Please ensure you have filled out the Name, Email, and Code before submitting the form.</p>
             </div>
-            <button type="submit" [disabled]="!rsvpForm.valid">Submit Form</button>
+            <button type="submit" [disabled]="!rsvpForm.valid">Submit RSVP</button>
         </form>
     </div>
     <div [hidden]="!submitted" class="success-msg">
@@ -122,4 +123,8 @@
             <div class="submitted-val">{{ model.dietaryRestrictions }}</div>
         </div>
         <br>
+        <div class ="image-row">
+            <div>Griffin will be happy to see you!!!!!</div>
+            <div class="thank-you-image"></div>
+        </div>
     </div>

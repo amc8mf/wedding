@@ -69,7 +69,7 @@ textarea {
 
 button {
     font-size: 18px;
-    background-color: #475247;
+    background-color: #383736;
     color: white;
     width: 60%;
     margin-left: auto;
@@ -78,11 +78,14 @@ button {
     border-radius: .3em;
     cursor: pointer;
     &:hover {
-        background-color: forestgreen;
+        background-color: white;
+        color: #383736;
     }
     &:disabled{
         cursor: not-allowed;
-        background-color: #475247;
+        background-color: #383736;
+        color: white;
+        opacity: .7;
     }
 }
 
@@ -153,3 +156,31 @@ h1 {
     margin: 0;
 }
 
+.thank-you-image {
+    background: url("../../../assets/IMG_4917.jpeg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    @media (max-width : 500px) {
+        width: 90%;
+    }
+}
+
+.image-row {
+    padding: 2em;
+    text-align: center;
+}
+
+.banner-image {
+    background: url("../../../assets/IMG_3810.jpeg");
+    filter: brightness(0.9) saturate(40%);
+    background-position: 47% 47%;
+    background-size: cover;
+    width: 100%;
+    height: 290px;
+    box-shadow: 0 0 8px 8px white inset;
+    @media (min-width: 1100px) {
+        background-position: 45% 45%;
+    }
+}
