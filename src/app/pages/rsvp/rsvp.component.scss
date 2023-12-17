@@ -76,6 +76,8 @@ button {
     margin-right: auto;
     height: 3em;
     border-radius: .3em;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+
     cursor: pointer;
     &:hover {
         background-color: white;
@@ -148,7 +150,6 @@ input[type="radio"] {
 }
 
 .success {
-    color: #42A948;
     font-size: 48px;
 }
 
@@ -168,7 +169,6 @@ h1 {
 }
 
 .image-row {
-    padding: 2em;
     text-align: center;
 }
 

@@ -1,6 +1,7 @@
-    <div class="banner-image">    <h1>RSVP</h1>
+    <div class="banner-image">    
+        <h1>RSVP</h1>
     </div>
-    <div [hidden]="submitted" class="form-container">
+    <div *ngIf="!submitted" class="form-container">
         <form (ngSubmit)="onSubmit()" #rsvpForm="ngForm">
     
             <div class="form-group">
@@ -75,7 +76,7 @@
             </div>
 
             <div class="form-group">
-                <label class="form-label" for="code">Please enter the code found in your email to submit the form:</label>
+                <label class="form-label" for="code">Please enter the code found in your received email (search for "Devon and Alex are getting married"):</label>
                 <input #code="ngModel"
                     codeValidator
                     type="text"
@@ -99,32 +100,14 @@
             <button type="submit" [disabled]="!rsvpForm.valid">Submit RSVP</button>
         </form>
     </div>
-    <div [hidden]="!submitted" class="success-msg">
+    <div *ngIf="submitted" class="success-msg">
         <h2 class="success">Success!</h2>
-        <p>You submitted the following:</p>
-        <div class="row">
-            <div class="label">Email:</div>
-            <div class="submitted-val">{{ model.email }}</div>
+        <div *ngIf="model.willAttend == false" class="image-row">
+            <h3>Sorry we are going to miss you, but we understand! Enjoy a picture of Griffin!</h3>
+            <div class="thank-you-image"></div>
         </div>
-        <div class="row">
-            <div class="label">Name:</div>
-            <div class="submitted-val">{{ model.name }}</div>
-        </div>
-        <div class="row">
-            <div class="label">Will Attend:</div>
-            <div class="submitted-val">{{ model.willAttend }}</div>
-        </div>
-        <div class="row">
-            <div class="label">Additional Guests:</div>
-            <div class="submitted-val">{{ model.additionalGuests }}</div>
-        </div>
-        <div class="row">
-            <div class="label">Dietary Restrictions:</div>
-            <div class="submitted-val">{{ model.dietaryRestrictions }}</div>
-        </div>
-        <br>
-        <div class ="image-row">
-            <div>Griffin will be happy to see you!!!!!</div>
+        <div *ngIf="model.willAttend == true" class="image-row">
+            <h3>Griffin will be happy to see you!!!!!</h3>
             <div class="thank-you-image"></div>
         </div>
     </div>
