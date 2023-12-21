@@ -15,7 +15,7 @@
 }
 
 h1 {
-    padding: 1em;
+    padding: .5em;
     margin: 0;
     font-size: 3.7em;
     text-transform: uppercase;
@@ -23,7 +23,6 @@ h1 {
 }
 
 .sub-title {
-    padding: 1em;
     font-size: 3em;
     border-top: 1px floralwhite solid;
     border-bottom: 1px floralwhite solid;
@@ -42,7 +41,6 @@ h1 {
 
 a {
     color: inherit;
-    text-decoration: none;
 }
 
 .flex {
@@ -67,6 +65,9 @@ button {
     background-color: #383736;
     color: white;
     width: 60%;
+    @media (min-width: 775px) {
+        width: 20%;
+    }
     margin-left: auto;
     margin-right: auto;
     height: 3em;
@@ -75,5 +76,8 @@ button {
     &:hover {
         background-color: white;
         color: #383736;
+    }
+    a {
+        text-decoration: none;
     }
 }

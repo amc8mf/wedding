@@ -13,11 +13,10 @@
                     required
                     placeholder="Enter your email (required)"
                     [(ngModel)]="model.email"
-                    name="email">
-                <div *ngIf="email.invalid && (email.dirty || email.touched)"
-                 class="alert">
-                    <div *ngIf="email.errors?.['required']">Email is required.</div>
-                </div>
+                    name="email" />
+                <ng-container *ngIf="email.invalid && (email.dirty || email.touched) && email.errors?.['required']">
+                    <div class="alert">Email is required.</div>
+                </ng-container>
             </div>
     
             <div class="form-group">
@@ -57,7 +56,7 @@
             </div>
     
             <div class="form-group">
-                <label class="form-label" for="additionalGuests">Are there any additional guests?</label>
+                <label class="form-label" for="additionalGuests">Are you responding for additional invitees?</label>
                 <textarea type="text"
                     class="form-control"
                     id="additionalGuests"
@@ -76,7 +75,7 @@
             </div>
 
             <div class="form-group">
-                <label class="form-label" for="code">Please enter the code found in your received email (search for "Devon and Alex are getting married"):</label>
+                <label class="form-label" for="code">Please enter the code found in our email invite:</label>
                 <input #code="ngModel"
                     codeValidator
                     type="text"

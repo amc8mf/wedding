@@ -87,8 +87,12 @@ button {
         cursor: not-allowed;
         background-color: #383736;
         color: white;
-        opacity: .7;
+        opacity: .3;
     }
+}
+
+input[type="text"], input[type="radio"] {
+    height: 35px;
 }
 
 input[type="radio"] {
@@ -121,6 +125,7 @@ input[type="radio"] {
     color: #a94442;
     margin-left: auto;
     margin-right:auto;
+    padding: 5px;
 }
 
 .ng-valid[required], .ng-valid.required  {
