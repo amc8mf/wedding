@@ -4,7 +4,7 @@
     <div *ngIf="!submitted" class="form-container">
         <form (ngSubmit)="onSubmit()" #rsvpForm="ngForm">
     
-            <div class="form-group">
+            <div [ngClass]="{'form-group': true, 'error': (email.invalid && (email.dirty || email.touched)) && email.errors?.['required']}">
                 <label class="form-label" for="email">*Email:</label>
                 <input #email="ngModel"
                     type="email"
@@ -14,12 +14,12 @@
                     placeholder="Enter your email (required)"
                     [(ngModel)]="model.email"
                     name="email" />
-                <ng-container *ngIf="email.invalid && (email.dirty || email.touched) && email.errors?.['required']">
-                    <div class="alert">Email is required.</div>
-                </ng-container>
             </div>
+            <ng-container *ngIf="email.invalid && (email.dirty || email.touched) && email.errors?.['required']">
+                <div class="alert">Email is required.</div>
+            </ng-container>
     
-            <div class="form-group">
+            <div [ngClass]="{'form-group': true, 'error': (name.invalid && (name.dirty || name.touched)) && name.errors?.['required'] }">
                 <label class="form-label" for="name">*Name:</label>
                 <input #name="ngModel"
                     type="text"
@@ -29,11 +29,10 @@
                     placeholder="Enter your name (required)"
                     [(ngModel)]="model.name"
                     name="first-name">
-                <div *ngIf="name.invalid && (name.dirty || name.touched)"
-                     class="alert">
-                    <div *ngIf="name.errors?.['required']">Name is required.</div>
-                </div>
             </div>
+            <ng-container *ngIf="name.invalid && (name.dirty || name.touched) && name.errors?.['required']">
+                <div class="alert">Name is required.</div>
+            </ng-container>
     
             <div class="form-group radio-form-group">
                 <span class="form-label">*Will you attend?</span>
@@ -74,7 +73,10 @@
                 </textarea>
             </div>
 
-            <div class="form-group">
+            <div [ngClass]="{
+                'form-group': true, 
+                'error': (code.invalid && (code.dirty || code.touched)) && (code.errors?.['invalidCode'] || code.errors?.['required']),
+                'green': code.value == 'silver-fox'}">
                 <label class="form-label" for="code">Please enter the code found in our email invite:</label>
                 <input #code="ngModel"
                     codeValidator
@@ -85,13 +87,11 @@
                     placeholder="Enter your code (required)"
                     [(ngModel)]="model.code"
                     name="code">
-                <div *ngIf="code.invalid && (code.dirty || code.touched)"
-                     class="alert">
-                    <div *ngIf="code.errors?.['required']">Code is required.</div>
-                    <div *ngIf="!code.errors?.['required'] && code.errors?.['invalidCode']">Code is not valid.</div>
-        
-                </div>
             </div>
+            <ng-container *ngIf="code.invalid && (code.dirty || code.touched)">
+                <div *ngIf="code.errors?.['required']" class="alert">Code is required.</div>
+                <div *ngIf="!code.errors?.['required'] && code.errors?.['invalidCode']" class="alert">Code is not valid.</div>
+            </ng-container>
 
             <div class="alert" *ngIf="email.touched && name.touched && code.touched && !rsvpForm.valid">
                 <p>Please ensure you have filled out the Name, Email, and Code before submitting the form.</p>
