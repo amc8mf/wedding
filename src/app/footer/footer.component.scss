@@ -16,7 +16,10 @@ div {
 
 p {
 
-    padding-right: 1em;
+    padding-right: 0;
+    @media (min-width: 900px) {
+        padding-right: 1em;
+    }
 }
 
 .content {
@@ -24,9 +27,11 @@ p {
     margin-right: auto;
     width: fit-content;
      div {
-         display: flex;
-         @media (max-width: 900px) {
-             display: block;
+         display: block;
+         @media (min-width: 900px) {
+             display: flex;
+             justify-content: center;
+             align-items: baseline;
          }
      }
 }
@@ -36,6 +41,14 @@ p {
     width: 100%;
     @media (max-width: 900px) {
         width: unset;
-
     }
+}
+
+.title {
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.main-title {
+    font-size: 1.3em;
 }
