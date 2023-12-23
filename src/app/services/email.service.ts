@@ -6,13 +6,17 @@ import {Observable, of} from "rxjs";
 })
 export class EmailService {
     private baseUrl = "https://mail"
-    private pubKey = "dIL-mFJhcvYUGVYfs";
+    private pubKey = process.env['MAIL_KEY'];
     constructor() {
-        emailJs.init(this.pubKey);
+        if (this.pubKey) {
+            emailJs.init(this.pubKey);
+
+        }
     }
 
     async postMessage$(input: any): Promise<any> {
-        console.log(input);
+        console.log(this.pubKey);
+        
         // await emailJs.send(
         //     "service_s3vhsur",
         //     "template_4dlyj64",
