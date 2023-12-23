@@ -76,7 +76,7 @@ button {
 .main-info {
     width: 95%;
     @media (min-width: 900px) {
-        width: 50%;
+        width: 80%;
     }
     border-top: 1px white solid;
     border-bottom: 1px white solid;
@@ -85,13 +85,18 @@ button {
     padding-top: .8em;
 }
 
-.date-location, .ceremony, .things-to-know {
-    padding-bottom: 1em;
+.date-location{
+    padding-bottom: 1.3em;
     p {
         @media (min-width: 900px) {
             text-align: left;
         }
     }
+    border-bottom: 1px white solid;
+}
+
+.ceremony {
+    padding-top: .8em;
 }
 
 .evening {
@@ -100,6 +105,10 @@ button {
 
 .evening p {
     font-style: italic;
+}
+
+.things-to-know {
+    padding-bottom: 1.3em;
 }
 
 blockquote {

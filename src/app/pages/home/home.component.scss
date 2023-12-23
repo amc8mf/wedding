@@ -26,7 +26,10 @@ h1 {
     font-size: 3em;
     border-top: 1px floralwhite solid;
     border-bottom: 1px floralwhite solid;
-    width: 80%;
+    width: 95%;
+    @media (min-width: 900px) {
+        width: 80%;
+    }
     margin: auto;
     font-family: "Pinyon Script";
     padding-top: 1em;
