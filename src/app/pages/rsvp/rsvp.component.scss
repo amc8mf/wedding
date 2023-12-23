@@ -4,6 +4,11 @@
     color: #475247;
 }
 
+h1 {
+    color: white;
+    font-size: 5em;
+}
+
 h1, h2, p {
     text-align: center;
 }
@@ -181,15 +186,14 @@ h1 {
 }
 
 .banner-image {
-    background: url("../../../assets/IMG_3810.jpeg");
-    filter: brightness(0.9) saturate(40%);
+    background: url("../../../assets/rome.jpg");
+    filter: grayscale(.5) brightness(0.9) saturate(40%);
     background-position: 47% 47%;
     background-size: cover;
     width: 100%;
-    height: 360px;
-    box-shadow: 0 0 8px 8px white inset;
+    height: 500px;
     @media (min-width: 1100px) {
-        background-position: 45% 45%;
+        background-position: 60% 60%;
     }
 }
 
