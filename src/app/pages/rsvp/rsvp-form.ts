@@ -4,7 +4,6 @@ export class RsvpForm {
         public name?: string,
         public willAttend?: boolean,
         public additionalGuests?: string,
-        public dietaryRestrictions?: string,
         public code?: string
     ) {}
 }
